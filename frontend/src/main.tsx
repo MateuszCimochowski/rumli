@@ -10,7 +10,12 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider
       theme={createTheme({
-        palette: { mode: 'light' },
+        palette: {
+          mode: 'light',
+          primary: {
+            main: '#1e293b', // ciemny granat do AppBar
+          },
+        },
         shape: { borderRadius: 12 },
         typography: { fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif' },
       })}

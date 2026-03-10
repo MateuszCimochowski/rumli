@@ -4,6 +4,7 @@ import { useAuth } from './auth/AuthContext'
 import { AppShell } from './components/AppShell'
 import { LoginPage } from './pages/LoginPage'
 import { MyReservationsPage } from './pages/MyReservationsPage'
+import { ProfilePage } from './pages/ProfilePage'
 import { RegisterPage } from './pages/RegisterPage'
 import { RoomsPage } from './pages/RoomsPage'
 
@@ -41,6 +42,16 @@ export default function App() {
           <Protected>
             <AppShell>
               <MyReservationsPage />
+            </AppShell>
+          </Protected>
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <Protected>
+            <AppShell>
+              <ProfilePage />
             </AppShell>
           </Protected>
         }
